@@ -13,7 +13,7 @@ os.makedirs(audio_folder, exist_ok=True)
 
 # Initialize the ElevenLabs client
 client = ElevenLabs(
-    api_key="sk_b08dcad52d5ee7fb2adc2c5eabd76d575bcdfedd428495fb"
+    api_key = os.getenv("ELEVENLABS_API_KEY")
 )
 
 @app.route('/')
