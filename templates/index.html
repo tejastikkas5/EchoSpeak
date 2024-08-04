@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text To Speech By TJS</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Existing CSS */
+        /* ... */
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Text To Speech By TJS</h1>
+    </header>
+    <main>
+        <div class="tts-container">
+            <form action="{{ url_for('convert') }}" method="post">
+                <label for="textInput">Enter your text in Hindi:</label>
+                <textarea id="textInput" name="text" rows="5" placeholder="टेक्स्ट यहां लिखें..."></textarea>
+                <button type="submit">Convert & Download</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <h3>Developed by Tejas Dilip Tikkas</h3>
+        <p>Diploma in Computer Engineering</p>
+        <p>Contact: <a href="mailto:tejastikkas2545@gmail.com"><i class="fas fa-envelope icon"></i> tejastikkas2545@gmail.com</a></p>
+    </footer>
+</body>
+</html>
